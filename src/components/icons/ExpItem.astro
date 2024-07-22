@@ -1,5 +1,5 @@
 ---
-//import LinkInline from "./LinkInline.astro";
+import LinkInline from "./LinkInline.astro";
 
 interface Props {
   title: string;
@@ -35,8 +35,8 @@ const { title, company, description, link, date } = Astro.props;
     {description}
     {
       link && (
-        //<LinkInline href={link}>
-          //Saber más{" "}
+        // <LinkInline href={link}>
+        //   Saber más{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-5 icon icon-tabler icon-tabler-chevron-right"

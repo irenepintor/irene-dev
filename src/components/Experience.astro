@@ -1,33 +1,29 @@
 ---
 import ExpItem from "./icons/ExpItem.astro";
-/*const Experiencie = [
+const Experiencie = [
   {
     date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
+    title: "Encargada",
+    company: "Cotillón y Repostería San Pedro",
     description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
+      "Apertura y cierre diario y mensual del comercio. Manejo de caja chica. Incorporación de nuevos productos según las necesidades de los clientes. Gestión de relaciones con proveedores y búsqueda de nuevos proveedores. Realización de tareas administrativas, incluyendo facturación y registro de nuevos clientes. Ejecución de tareas contables como control y registro de facturas. Personal a cargo: 2"
   },
   {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
+    date: "Noviembre 2011",
+    title: "Administrativa",
+    company: "Transporte Pintor",
     description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+      "Control de entradas y salidas de la ﬂota de transporte. Preparación de documentación necesaria. Coordinación de distribución y recogida de paqueteria. Atención de clientes en sitio. Seguimiento de vehículos y gestión de incidencias.",
   },
 ];
 ---
-
-//Experiencia Laboral:
-//Del más nuevo al más viejo
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     Experiencie.map((experiencie) => (
       <li class="">
-        <ExperienceItem {...experiencie} />
+        <ExpItem {...experiencie} />
       </li>
     ))
   }
-</ol>*/
+</ol>

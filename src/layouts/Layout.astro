@@ -13,11 +13,11 @@ const { description, title } = Astro.props
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/irene-pintor.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Irene Pintor | Portfolio</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#0F0F0F] bg-[radial-gradient(#383838_1px,#0F0F0F_1px)] bg-[size:20px_20px]"></div>
