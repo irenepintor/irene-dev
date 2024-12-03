@@ -1,0 +1,42 @@
+{
+    "about": {
+        "description": "A professional with solid experience in customer service and retail management, transitioning to the tech sector. Recently certified in web development and JavaScript, with skills in React JS and a focus on providing practical and creative solutions. Known for organizational skills, adaptability, and customer orientation.",
+        "experience": [
+            {
+                "position": "Store Manager",
+                "company": "Cotillón y Repostería San Pedro",
+                "location": "San Pedro, Buenos Aires",
+                "duration": "August 2019 – December 2024",
+                "responsibilities": [
+                    "Managed daily store operations: opening, closing, and overall organization.",
+                    "Supervised inventory and product restocking.",
+                    "Provided personalized customer service and resolved conflicts.",
+                    "Negotiated prices and logistics with suppliers.",
+                    "Managed cash flow and electronic payments."
+                ]
+            },
+            {
+                "position": "Sales Associate & Cashier",
+                "company": "Cotillón y Repostería San Pedro",
+                "location": "San Pedro, Buenos Aires",
+                "duration": "March 2014 – September 2019",
+                "responsibilities": [
+                    "Assisted customers with product selection and purchases.",
+                    "Managed product replenishment and display maintenance.",
+                    "Handled cash register and payment systems."
+                ]
+            },
+            {
+                "position": "Logistics Administrator",
+                "company": "Transporte Pintor SRL",
+                "location": "San Pedro, Buenos Aires",
+                "duration": "January 2011 – January 2013",
+                "responsibilities": [
+                    "Coordinated documentation for shipments and product receipt.",
+                    "Processed payments and issued invoices.",
+                    "Managed staff to optimize operational resources."
+                ]
+            }
+        ]
+    }
+}

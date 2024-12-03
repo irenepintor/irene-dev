@@ -1,0 +1,81 @@
+---
+const techStack = [
+  { src: "/stack/html.svg", alt: "HTML5" },
+  { src: "/stack/css.svg", alt: "CSS3" },
+  { src: "/stack/javascript.svg", alt: "JavaScript" },
+  { src: "/stack/tailwind.svg", alt: "Tailwind CSS" },
+  { src: "/stack/react.svg", alt: "React" },
+  { src: "/stack/nodejs.svg", alt: "Node.js" },
+  { src: "/stack/git.svg", alt: "Git" },
+  { src: "/stack/github.svg", alt: "GitHub" },
+  { src: "/stack/astro.svg", alt: "Astro" },
+  { src: "/stack/bootstrap.svg", alt: "Bootstrap" },
+  { src: "/stack/firebase.svg", alt: "Firebase" },
+  { src: "/stack/sass.svg", alt: "SASS" },
+];
+---
+
+<div class="tech-stack-wrapper">
+  <div class="tech-stack-logos">
+    {
+      techStack.map((tech) => (
+        <div class="tech-logo w-[80px] h-[80px] flex justify-center items-center">
+          <img
+            src={tech.src}
+            alt={tech.alt}
+            class="w-full h-full object-contain"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style scoped>
+  /* Wrapper for the tech stack logos */
+  .tech-stack-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Adjust height based on your design */
+    overflow: hidden; /* Hide logos when they move outside */
+  }
+
+  /* The logos container that will slide */
+  .tech-stack-logos {
+    display: flex;
+    animation: slide-logos 20s linear infinite; /* Slow sliding animation */
+  }
+
+  /* Keyframes for sliding effect */
+  @keyframes slide-logos {
+    0% {
+      transform: translateX(
+        100%
+      ); /* Start completely off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move completely off-screen to the left */
+    }
+  }
+
+  /* Individual tech logos */
+  .tech-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px; /* Space between logos */
+    min-width: 80px; /* Ensure logos have enough space to fit */
+  }
+
+  .tech-logo img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  /* Zoom effect on hover */
+  .tech-logo:hover {
+    transform: scale(1.1);
+  }
+</style>

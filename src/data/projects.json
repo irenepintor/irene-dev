@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Project 1",
+        "description": "A short description of Project 1, highlighting its features or purpose.",
+        "image": "",
+        "link": "https://github.com/your-project1",
+        "techStack": [
+            "React",
+            "Tailwind CSS",
+            "Node.js"
+        ]
+    },
+    {
+        "title": "Project 2",
+        "description": "A brief explanation of Project 2, showcasing its uniqueness.",
+        "image": "",
+        "link": "https://github.com/your-project2",
+        "techStack": [
+            "Vue.js",
+            "Sass",
+            "Firebase"
+        ]
+    },
+    {
+        "title": "Project 3",
+        "description": "A detailed description of Project 3 to engage viewers.",
+        "image": "",
+        "link": "https://github.com/your-project3",
+        "techStack": [
+            "Astro",
+            "TypeScript",
+            "GraphQL"
+        ]
+    }
+]

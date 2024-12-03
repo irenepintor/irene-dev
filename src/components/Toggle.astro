@@ -1,0 +1,43 @@
+<script is:inline>
+  // Run only in the browser
+  if (typeof window !== "undefined") {
+    const htmlElement = document.documentElement;
+
+    // Check and apply the theme from localStorage or system preference
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+    }
+  }
+</script>
+
+<button
+  on:click={() => {
+    const htmlElement = document.documentElement;
+
+    if (htmlElement.classList.contains("dark")) {
+      htmlElement.classList.remove("dark");
+      localStorage.setItem("theme", "light"); // Save the light mode preference
+    } else {
+      htmlElement.classList.add("dark");
+      localStorage.setItem("theme", "dark"); // Save the dark mode preference
+    }
+  }}
+  class="ml-auto p-2 rounded text-[#FFFFFF] bg-[#3282B8] hover:bg-[#4978A4] transition-colors"
+  aria-label="Toggle Theme"
+>
+  <span>
+    {
+      typeof document !== "undefined" &&
+      document.documentElement.classList.contains("dark")
+        ? "🌞"
+        : "🌙"
+    }
+  </span>
+</button>

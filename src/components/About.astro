@@ -1,0 +1,59 @@
+---
+import aboutData from "../data/about.json";
+
+const { description, experience } = aboutData.about;
+
+// import aboutDataEn from "../data/about.json";
+// import aboutDataEs from "../data/about-es.json";
+
+// const aboutData = currentLanguage === 'es' ? aboutDataEs : aboutDataEn;
+---
+
+<section class="bg-[#1A1A2E] text-white py-16 px-6">
+  <div class="container mx-auto max-w-4xl text-center">
+    <!-- Title and Description -->
+    <h2 class="text-4xl font-bold text-[#D5FFFF] mb-6">About Me</h2>
+    <p class="text-xl mb-8">{description}</p>
+
+
+    <!-- CV Download Button -->
+    <div class="mt-8">
+      <a
+        href="#"
+        download
+        class="inline-block bg-[#3282B8] text-white text-lg font-semibold py-2 px-6 rounded-lg hover:bg-[#005f80] transition-colors"
+      >
+        Download My CV
+      </a>
+    </div>
+
+    <!-- Work Experience Timeline -->
+    <div class="mt-12 text-left">
+      <h3 class="text-3xl font-bold text-[#D5FFFF] mb-6">Work Experience</h3>
+      <div class="relative pl-4">
+        {experience.map((job, index) => (
+          <div key={index} class="mb-12">
+            <!-- Timeline Marker and Line -->
+            <div class="relative flex items-center mb-4">
+              <div class="absolute left-[-9px] top-1/2 transform -translate-y-1/2 w-3 h-3 bg-[#3282B8] rounded-full"></div>
+              <div class="w-full border-t-2 border-[#3A3A4D]"></div>
+            </div>
+
+            <!-- Job Details -->
+            <div class="bg-[#0F3460] bg-opacity-40 p-6 rounded-lg shadow-sm">
+                <h4 class="text-2xl font-semibold text-[#ACD8FF]">{job.position}</h4>
+                <p class="text-lg text-[#ACD8FF]">{job.company}</p>
+                <p class="text-sm text-[#ACD8FF] mb-4">{job.duration}</p>
+                <ul class="list-disc list-inside text-[#E0E0E0] space-y-2">
+                    {job.responsibilities.map((task, taskIndex) => (
+                    <li key={taskIndex} class="text-sm">{task}</li>
+                    ))}
+                </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+      </div>
+    </div>
+</section>

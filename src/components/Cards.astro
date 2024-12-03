@@ -1,0 +1,35 @@
+---
+const { title, description, image, link, techStack } = Astro.props;
+---
+
+<div
+  class="bg-[#29293E] rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:scale-105 transform transition-all duration-300"
+>
+  <img src={image} alt={title} class="w-full h-40 object-cover" />
+  <div class="p-4">
+    <h3 class="text-xl font-semibold text-[#D5FFFF] mb-2">{title}</h3>
+    <p class="text-[#E0E0E0] mb-4">{description}</p>
+    <div class="mt-4">
+      <h4 class="text-[#D5FFFF] font-medium mb-2">Tech Stack</h4>
+      <div class="flex flex-wrap gap-2">
+        {
+          techStack.map((tech) => (
+            <span class="bg-[#424057] text-[#E0E0E0] text-xs font-semibold px-3 py-1 rounded-full">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <div class="mt-4">
+      <a
+        href={link}
+        class="text-[#ACD8FF] hover:underline font-medium"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project
+      </a>
+    </div>
+  </div>
+</div>

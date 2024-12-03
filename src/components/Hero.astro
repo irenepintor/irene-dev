@@ -1,0 +1,102 @@
+---
+import TechStack from "./TechStack.astro"
+---
+
+<section class="hero-bis relative py-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center text-white">
+      <h1 class="text-4xl sm:text-5xl font-bold text-[#D5FFFF] mb-2">Hi! I'm ...</h1>
+      <div class="flex justify-center mb-4">
+        <img
+          src="/hero.png"
+          alt="Logo"
+          class="w-full max-w-[750px] h-auto hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+
+      <p class="text-xl sm:text-2xl mt-4">
+        Discover my projects, skills, and technologies I use to bring ideas to
+        life.
+      </p>
+
+      <div class="mt-6">
+        <pre id="console-log" class="console-log"></pre>
+      </div>
+    </div>
+  </div>
+
+  <TechStack />
+
+  <svg
+    class="circuit-background absolute top-0 left-0 w-full h-full"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 500 500"
+    fill="none"
+  >
+    <g
+      stroke="#00BFFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M50 50 L450 50 L450 450 L50 450 Z"></path>
+      <path d="M50 100 L450 100"></path>
+      <path d="M100 50 L100 450"></path>
+      <path d="M200 50 L200 450"></path>
+      <path d="M300 50 L300 450"></path>
+      <path d="M400 50 L400 450"></path>
+      <circle cx="100" cy="100" r="20"></circle>
+      <circle cx="400" cy="400" r="20"></circle>
+    </g>
+  </svg>
+</section>
+
+
+<style>
+  .hero-bis {
+    position: relative;
+    min-height: 400px;
+    background-color: #1a1a2e;
+  }
+
+  .console-log {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-top: 20px;
+  color: #acd8ff;
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 100px;
+  overflow: hidden;
+}
+
+  .circuit-background {
+    z-index: -1;
+    opacity: 0.3;
+  }
+</style>
+
+<script>
+  if (typeof window !== "undefined") {
+    const consoleLogElement = document.getElementById("console-log");
+    const text = `> Welcome to my portfolio\n> I build websites & apps with the latest technologies\n> Check out my projects below...`;
+
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        consoleLogElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      } else {
+        setTimeout(() => {
+          consoleLogElement.innerHTML = "";
+          index = 0;
+          typeWriter();
+        }, 3000);
+      }
+    }
+
+    typeWriter();
+  }
+</script>

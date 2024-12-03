@@ -1,0 +1,18 @@
+---
+import projects from "../data/projects.json";
+import Cards from "./Cards.astro";
+---
+
+<section class="bg-[#1A1A2E] py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-[#D5FFFF] text-center mb-6">
+      My Projects
+    </h2>
+    <p class="text-[#E0E0E0] text-center mb-8">
+      A showcase of my favorite projects and the technologies behind them.
+    </p>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => <Cards {...project} />)}
+    </div>
+  </div>
+</section>
