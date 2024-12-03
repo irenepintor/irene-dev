@@ -43,6 +43,4 @@ This is my personal portfolio website, showcasing my skills, projects, and exper
 
 ## Images
 
-![Screenshot of Portfolio](./portfolio-homepage.png)
-![Screenshot of About Me](./portfolio-about.png)
-*iPad Air size screenshots*
+<img src="public/images/portfolio-homepage.png" width="500" />
